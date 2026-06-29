@@ -14,6 +14,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - name: Install dependencies
+        run: |
+          pnpm config set approve-builds esbuild
+          pnpm install
       - uses: dtolnay/rust-toolchain@stable
       - name: Install Linux dependencies
         run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
@@ -49,6 +57,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - name: Install dependencies
+        run: |
+          pnpm config set approve-builds esbuild
+          pnpm install
       - uses: dtolnay/rust-toolchain@stable
       - uses: tauri-apps/tauri-action@dev
         env:
