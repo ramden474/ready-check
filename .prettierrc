@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "prettier-plugin-vue",
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@/",
+    "^@components/",
+    "^@stores/",
+    "^@styles/",
+    "^[./].*\\.vue$",
+    "^[./].*\\.css$",
+    "^[./]"
+  ],
+  "semi": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "vueIndentScriptAndStyle": true,
+  "singleAttributePerLine": true
+}
