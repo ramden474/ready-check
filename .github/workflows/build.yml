@@ -20,7 +20,6 @@ jobs:
           version: latest
       - name: Install dependencies
         run: |
-          pnpm config set approve-builds esbuild
           pnpm install
       - uses: dtolnay/rust-toolchain@stable
       - name: Install Linux dependencies
@@ -43,7 +42,6 @@ jobs:
           version: latest
       - name: Install dependencies
         run: |
-          pnpm config set approve-builds esbuild
           pnpm install
       - uses: dtolnay/rust-toolchain@stable
       - uses: tauri-apps/tauri-action@dev
@@ -63,7 +61,6 @@ jobs:
           version: latest
       - name: Install dependencies
         run: |
-          pnpm config set approve-builds esbuild
           pnpm install
       - uses: dtolnay/rust-toolchain@stable
       - uses: tauri-apps/tauri-action@dev
